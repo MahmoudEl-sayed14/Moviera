@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Site</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">Moviera</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="Movie.html"><i class="bi bi-plus"></i> Add Movie</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar-->
+
+    <div class="container mt-4">
+        <h2><i class="bi bi-film"></i> Movies</h2>
+        <hr/>
+        <!-- Movie List -->
+        <div class="row mt-4" id="movieList"></div>
+        <!-- Movie List -->
+
+        <!-- No Movies Found -->
+        <div class="alert alert-warning" role="alert" id="noMoviesMessage"> <i class="bi bi-exclamation-triangle"></i> No movies found! </div>
+        <!-- No Movies Found -->
+    </div>
+
+    <footer class="bg-dark text-center p-2 " style="position: absolute; bottom: 0; left: 0; right: 0; color: white;">
+      <p>
+        &copy;Moviera
+      </p>
+    </footer>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

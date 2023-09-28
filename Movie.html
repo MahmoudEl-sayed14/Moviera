@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
+  </head>
+  <body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html">Moviera</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="Movie.html"><i class="bi bi-plus"></i> Add Movie</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar-->
+
+    <main class="container">
+      <h2 id="heading"></h2>
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Title Input -->
+          <div class="form-group">
+              <label for="Title">Title</label>
+              <input type="text" class="form-control" id="Title" name="Title" maxlength="250" required/>
+          </div>
+          <!-- Genre Select -->
+          <div class="input-group mb-3">
+                <div class="input-group-prepend"> 
+                    <label for="GenreId" class="input-group-text">Genre</label>
+                </div>
+                <select id="GenreId" name="GenreId" class="custom-select" required>
+                    <option disabled selected>Select a genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Adventure">Adventure</option>
+                    <!-- Use meaningful genre IDs -->
+                </select>
+          </div>
+          <!-- Year Input -->
+          <div class="form-group">
+              <label for="Year">Year</label>
+              <input type="number" class="form-control" id="Year" name="Year" min="1900" max="2030" step="1" required/>
+          </div>
+          <!-- Rate Input -->
+          <div class="form-group">
+              <label for="Rate">Rate</label>
+              <input type="number" class="form-control" id="Rate" name="Rate"  min="1" max="10" step="0.1" required/>
+          </div>
+          <!-- Storyline Textarea -->
+          <div class="form-group">
+              <label for="Storyline">Storyline</label>
+              <textarea class="form-control" id="Storyline" name="Storyline" maxlength="2500" rows="4"></textarea>
+          </div>
+          <!-- Poster Input -->
+          <div class="custom-file">
+              <input type="file" class="custom-file-input" id="Poster" name="Poster" accept="image/*" onchange="displayImage(this)" required/>
+              <label class="custom-file-label" for="Poster">Choose file</label>
+          </div>
+          <!-- Save Button -->
+          <button id="Submit" class="btn btn-primary mt-4">
+              <i class="bi bi-check"></i> Save
+          </button>
+          <!-- Cancel Button -->
+          <a href="javascript:history.back()" class="btn btn-outline-secondary mt-4">
+              <i class="bi bi-x"></i> Cancel
+          </a>
+        </div>
+
+        <div class="col-md-6">
+            <!-- Poster Preview -->
+            <div id="poster-container">
+                <img src="" alt="Poster Image" class="img-thumbnail" id="poster-preview" style="display: none;"/>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center p-2 " style="position: absolute; bottom: 0; left: 0; right: 0; color: white;">
+        <p>
+          &copy;Moviera
+        </p>
+      </footer>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/movie.js"></script>
+  </body>
+</html>
